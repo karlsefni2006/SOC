@@ -11,7 +11,7 @@ int main() {
 
     map<int, int> index;
     for (int i = 0; i < n; i++) {
-        index[input[i]] = i + 1;  // store 1-based index
+        index[input[i]] = i + 1; 
     }
 
     bool found = false;
@@ -23,7 +23,7 @@ int main() {
             auto x = index.find(sum);
             if (x != index.end()) {
                 int k = x->second;
-                if (k != i + 1 && k != j + 1) { // ensure all positions are distinct
+                if (k != i + 1 && k != j + 1) {
                     i_ans = i + 1;
                     j_ans = j + 1;
                     k_ans = k;
@@ -40,5 +40,5 @@ int main() {
         cout << "IMPOSSIBLE\n";
     }
 
-    return 0;
+
 }
